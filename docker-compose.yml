@@ -9,15 +9,14 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
     ports:
-      - '5432:5432'
-      
+      - '5433:5432'
 
   redis:
     image: redis:latest
     container_name: redis_container
     ports:
       - '6379:6379'
-    
+
   # app:
   #   build: .
   #   working_dir: $home/app/preview
@@ -25,7 +24,7 @@ services:
   #     - sh
   #     - -c
   #     - |
-  #       bb start 
+  #       bb start
   #       cd ./open_tms_shared/open_tms_data
   #       npm run db:push
   #       npm run prisma:seed:dev
